@@ -2,7 +2,7 @@
 
 ## Description
 
-The motivation for this project was to create a weather dashboard application with form inputs that allows a user to search for a city and its weather.
+The motivation for this project was to create a weather dashboard application with form inputs that allows a user to search for a city and its 5 day forecast.
 
 This app runs in the browser, and features dynamically updated HTML and CSS.
 
@@ -72,6 +72,7 @@ Example of...:
 Shows data saved in local storage:
 ![JC--Weather-Dashboard](.)
 
+<br>
 
 
 ## Credits
