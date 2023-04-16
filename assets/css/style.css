@@ -1,0 +1,21 @@
+:root {
+
+    --dk-brown: #e3d5ca; 
+    --wrm-brown: #d5bdaf;
+    
+  }
+  
+html {
+    font-size: 15px ;
+    font-family: "Montserrat", sans-serif;
+  }
+
+.header {
+    color: black;
+    background-color: var(--#d5bdaf);
+  }
+  
+
+body {
+    background-color: var(--wrm-brown);
+  }
