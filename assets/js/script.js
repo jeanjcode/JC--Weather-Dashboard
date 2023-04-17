@@ -114,6 +114,7 @@ function renderForecast() {
           .format("DD/MM/YYYY")}</strong></span>`
       )      
     );
+    
 
     fiveDforecast.append(
       $(`<img>`, {
@@ -131,6 +132,7 @@ function renderForecast() {
     );
   }
 }
+
 
 
 
