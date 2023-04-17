@@ -46,7 +46,7 @@ if (localStorage.getItem("history") == null) {
 
 
 
-// function for getting weather at coordinates and call render functions
+//Search weather function
 function searchWeather() {
   fetch(oneCallApiUrl)
     .then(function (response) {
@@ -81,6 +81,25 @@ function searchforCity(e) {
 $("#searchButton").click(searchforCity);
 
 
+
+//Render current weather
+function renderCurrentWeather() {
+  
+  var currentWeather = weatherData.current;
+  $("#defaultCity").text(`${coordinates.city.name}, ${coordinates.city.country} - `);
+  $("#todaysDate").text(
+    moment
+      .unix(currentWeather.dt + weatherData.timezone_offset)
+      .format("DD/MM/YYYY")
+  );
+  $("#weatherIcon").attr(
+    "src",
+    `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`
+  );
+  $("#temp").text(`Temperature: ${currentWeather.temp} °C`);
+  $("#wind").text(`Wind speed: ${currentWeather.wind_speed} meter/sec`);
+  $("#humidity").text(`Humidity: ${currentWeather.humidity}`);
+  }
 
 
 
