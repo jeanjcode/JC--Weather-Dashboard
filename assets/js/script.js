@@ -94,11 +94,11 @@ function renderCurrentWeather() {
   );
   $("#weatherIcon").attr(
     "src",
-    `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`
   );
-  $("#temp").text(`Temperature: ${currentWeather.temp} °C`);
-  $("#wind").text(`Wind speed: ${currentWeather.wind_speed} meter/sec`);
-  $("#humidity").text(`Humidity: ${currentWeather.humidity}`);
+  $("#temp").text(`Temp: ${currentWeather.temp} °C`);
+  $("#wind").text(`Wind: ${currentWeather.wind_speed} meter/sec`);
+  $("#humidity").text(`Humidity: ${currentWeather.humidity} %`);
   }
 
 
@@ -116,6 +116,8 @@ function renderCurrentWeather() {
 
 
 ///
+// Weather icons - URL is https://openweathermap.org/img/wn/10d@2x.png
+// https://openweathermap.org/weather-conditions
 
 
 // https://home.openweathermap.org/users/sign_in

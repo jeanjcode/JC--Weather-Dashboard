@@ -18,3 +18,13 @@ html {
 body {
     background-color: var(--wrm-brown);
   }
+
+
+#todaysWeather {
+    width: 100%;
+    border-bottom: 5px solid #e3d5ca;
+    border-top: 5px solid #e3d5ca;
+    
+  }  
+
+  
