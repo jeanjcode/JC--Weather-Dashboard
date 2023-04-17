@@ -33,15 +33,19 @@ h1   {
 #weatherContainer {
   width: 90%;
   display: flex;
-  flex-wrap: wrap;       
-    
+  flex-wrap: wrap;        
   }
   
 .weatherCard {
   width: 18%;
-  padding: 1%; 
-    
+  padding: 1%;     
+}
+
+@media screen and (max-width: 390px) {
+  .weatherCard {
+    width: 90%;
   }
+}
 
 
   
