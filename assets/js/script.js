@@ -109,9 +109,9 @@ function renderForecast() {
     var fiveDforecast = $(forecastFive[i]);
     fiveDforecast.empty()
     fiveDforecast.append(
-      $(`<p><span>${moment
+      $(`<p><strong><span>${moment
           .unix(nextDay.dt + weatherData.timezone_offset)
-          .format("DD/MM/YYYY")}</span>`
+          .format("DD/MM/YYYY")}</strong></span>`
       )      
     );
 
@@ -145,14 +145,17 @@ function renderForecast() {
 
 
 
-///
-//
+
+
+
+
+
+
 
 // Weather icons - URL is https://openweathermap.org/img/wn/10d@2x.png
 // https://openweathermap.org/weather-conditions
 
 
-// https://home.openweathermap.org/users/sign_in
 
 // Current weather data:
 // https://openweathermap.org/current
