@@ -26,13 +26,13 @@ https://jeanj22.github.io/JC--Weather-Dashboard/
 
 The following steps show how the user can navigate the Weather Dashboard application: 
 
-1. When a user searches for a city, they are presented with the current and next 5-day forecast.
+1 .  When a user searches for a city, they are presented with the current and next 5-day forecast.
 
 
-2. The default city is set the Birmingham, GB. This is changed once the user performs a city search.
+2 . The default city is set the Birmingham, GB. This is changed once the user performs a city search.
 
 
-2. Once the user performs a city search they presented with the following information:
+3 . Once the user performs a city search they presented with the following information:
 - The city name
 - The current date
 - An icon representation of the weather conditions
@@ -41,7 +41,7 @@ The following steps show how the user can navigate the Weather Dashboard applica
 - The humidity
 
 
-3. The 5-day forecast is displayed below the current day forecast. The 5-day forecast displays the following:  
+4 . The 5-day forecast is displayed below the current day forecast. The 5-day forecast displays:  
 
 - The date (for each of the next five days)
 - An icon representation of weather conditions
