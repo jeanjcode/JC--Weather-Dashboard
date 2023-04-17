@@ -7,7 +7,6 @@ var lat;
 var lon; 
 
 
-
 //Date & time
 $("#today").text(moment().format("DD/MM/YYYY HH:mm:ss"));
 
@@ -15,7 +14,6 @@ function currentTime() {
   $("#today").text(moment().format("DD/MM/YYYY HH:mm:ss"));
 }
 setInterval(currentTime, 1000);
-
 
 
 //Search city coordinates
@@ -43,7 +41,6 @@ function searchCoord() {
 if (localStorage.getItem("history") == null) {
   localStorage.setItem("history", "[]");
 }
-
 
 
 //Search weather function
@@ -94,13 +91,46 @@ function renderCurrentWeather() {
   );
   $("#weatherIcon").attr(
     "src",
-    `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`
+    `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`,
+    
   );
   $("#temp").text(`Temp: ${currentWeather.temp} °C`);
-  $("#wind").text(`Wind: ${currentWeather.wind_speed} meter/sec`);
+  $("#wind").text(`Wind: ${currentWeather.wind_speed} mph`);
   $("#humidity").text(`Humidity: ${currentWeather.humidity} %`);
   }
 
+
+
+//Render 5 day forecast
+var forecastFive = $(".weatherCard");
+function renderForecast() {
+  for (var i = 1; i < forecastFive.length; i++) {
+    var nextDay = weatherData.daily[i];
+    var fiveDforecast = $(forecastFive[i]);
+    fiveDforecast.empty()
+    fiveDforecast.append(
+      $(`<p><span>${moment
+          .unix(nextDay.dt + weatherData.timezone_offset)
+          .format("DD/MM/YYYY")}</span>`
+      )      
+    );
+
+    fiveDforecast.append(
+      $(`<img>`, {
+        src: `https://openweathermap.org/img/wn/${nextDay.weather[0].icon}.png`,
+        alt: "daily weather icon",
+      })
+    );
+
+    fiveDforecast.append($(`<p><span> Temp: ${nextDay.temp.day} °C </span>`));
+    fiveDforecast.append(
+      $(`<p><span>Wind: ${nextDay.wind_speed} mph </span>`)
+    );
+    fiveDforecast.append(
+      $(`<p><span>Humidity: ${nextDay.humidity} % </span>`)
+    );
+  }
+}
 
 
 
@@ -116,6 +146,8 @@ function renderCurrentWeather() {
 
 
 ///
+//
+
 // Weather icons - URL is https://openweathermap.org/img/wn/10d@2x.png
 // https://openweathermap.org/weather-conditions
 
